@@ -1,0 +1,148 @@
+:root {
+  /*## Colors*/
+
+  /* ### Neutral */
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+
+  /* ### Primary */
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Light-grey);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: var(--White);
+  padding: 2rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 8rem;
+  border-bottom-left-radius: 1rem;
+  max-width: 500px;
+
+  @media (width <= 500px) {
+    width: 90%;
+  }
+}
+
+.form {
+  display: flex;
+  column-gap: 1rem;
+  border-bottom: 1px solid var(--Light-grey);
+  padding-bottom: 1.8rem;
+  position: relative;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--Smokey-grey);
+}
+
+.form__input {
+  padding: 0.7rem;
+  border: 2px solid var(--Light-grey);
+  width: 100%;
+  border-radius: 0.3rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--Off-black);
+
+  &::placeholder {
+    color: var(--Smokey-grey);
+    font-weight: 800;
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid var(--Purple);
+  }
+}
+
+.error-msg {
+  font-size: 0.6rem;
+  color: var(--Light-red);
+  margin-top: 0.4rem;
+}
+
+.form__btn {
+  border: none;
+  background: var(--Purple);
+  padding: 2rem;
+  border-radius: 50%;
+  width: 1.3rem;
+  height: 1.3rem;
+  transform: translateY(5rem);
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+
+  &:hover {
+    background: var(--Off-black);
+  }
+
+  > .form__btn--img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2rem;
+  }
+
+  @media (width <= 500px) {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.age-result {
+  margin: 1.5rem 0 0 0;
+
+  & h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-style: italic;
+
+    > span {
+      color: var(--Purple);
+    }
+  }
+
+  @media (width <= 500px) {
+    margin: 4.5rem 0 0 0;
+  }
+}
+
+/* @media (width <= 500px)  */
+
+.error {
+  border: 2px solid var(--Light-red) !important;
+}
+
+.hidden {
+  visibility: hidden;
+}

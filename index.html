@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Age calculator app</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class=""></div>
+        <div>
+          <form class="form">
+            <div class="form__set">
+              <label class="form__label" for="">DAY</label>
+              <input
+                class="form__input form__input--day"
+                type="number"
+                placeholder="DD"
+              />
+              <p class="error-msg error-msg--day hidden"></p>
+            </div>
+            <div class="form__set">
+              <label class="form__label" for="">MONTH</label>
+              <input
+                class="form__input form__input--month"
+                type="number"
+                placeholder="MM"
+              />
+              <p class="error-msg error-msg--month hidden"></p>
+            </div>
+            <div class="form__set">
+              <label class="form__label" for="">YEAR</label>
+              <input
+                class="form__input form__input--year"
+                type="number"
+                placeholder="YYYY"
+              />
+              <p class="error-msg error-msg--year hidden"></p>
+            </div>
+            <button class="form__btn" type="button">
+              <img
+                class="form__btn--img"
+                src="./assets/images/icon-arrow.svg"
+                alt="arrow-icon"
+              />
+            </button>
+          </form>
+        </div>
+        <div class="age-result">
+          <h2><span class="age-result__years">--</span>years</h2>
+          <h2><span class="age-result__months">--</span>months</h2>
+          <h2><span class="age-result__days">--</span>days</h2>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
